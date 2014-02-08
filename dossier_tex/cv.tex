@@ -1,0 +1,93 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[french,a4paper,skipsamekey,revbib]{curve}
+\usepackage[a4paper,nohead,nofoot,hmargin=1.5cm,vmargin=1.5cm]{geometry}
+%\usepackage{floatflt}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\usepackage[scaled=.95]{helvet}
+\usepackage{courier}
+
+\usepackage{graphicx}
+
+\usepackage[colorlinks]{hyperref}
+
+% \photo[r]{yara2}
+% \photoscale{0.1}
+\leftheader{\textbf{ROULLIER Vincent}\\
+  18, rue de Placy\\
+  14220 Thury-harcourt - France\\
+  Tél.: 06.77.54.52.27\\
+  \href{mailto:vincent.roullier@gmail.com}{\texttt{vincent.roullier@gmail.com}}\\
+  35 ans, Français, Pacsé, 3 enfants, Permis B
+}
+\rightheader{~}
+
+\titlefont{\fontfamily{pag}\selectfont\bfseries\Huge}
+\title{Docteur en Traitement du signal et des images}
+%\subtitle{Qualifi\'e en 27\up{\`eme} section (N° 09227185993) et 61\up{\`eme} section (N° 09261185993).}
+
+\subtitlefont{\fontfamily{pag}\selectfont\itshape\large}
+%\subtitle{Qualifi\'e en 27\up{\`eme} section (09227185993) \\ et 61\up{\`eme} section (09261185993).}
+
+\rubricfont{\fontfamily{pag}\selectfont\bfseries\Large}
+\subrubricfont{\fontfamily{pag}\selectfont\bfseries\itshape\large}
+\keyfont{\fontfamily{pag}\selectfont\bfseries}
+
+\usepackage{pifont}
+\prefix{\ding{52}}
+\continuedname{~~(suite)}
+
+\setlength\rubricspace{10pt}
+\setlength\rubricafterspace{10pt}
+\setlength\subrubricbeforespace{10pt}
+\setlength\subrubricspace{3pt}
+\renewcommand\arraystretch{1.5}
+%\setlength\rubricafterspace{-10pt}
+
+\usepackage{color}
+\makeatletter
+% Cross the rubric titles:
+\def\@@rubrichead#1{%
+  \@rubricfont%
+  \makebox[0pt][l]{\colorbox[gray]{0.7}{\makebox[\linewidth-4\fboxsep]{}}}%
+  \makebox[\linewidth-2\fboxsep][c]{#1}}
+% or underline them:
+\iffalse
+\def\@@rubrichead#1{%
+  \@rubricfont%
+  \makebox[0pt][l]{\rule[-2mm]{\linewidth}{1mm}}%
+  \makebox[\linewidth-2\fboxsep][c]{#1}}
+\fi
+\def\@@subrubric#1{%
+  \rule{0bp}{\@beforespace}
+  {\@subrubricfont%
+    \makebox[1ex][l]{\colorbox[gray]{0.7}{\textcolor[gray]{0.7}{M}}}#1}%
+  \@subrubricmark{#1}}
+\makeatother
+
+
+\headerscale{.45}
+
+\makeatletter
+\def\mymulticol{\@nextentry\noalign{\gdef\@nextentry{}}
+  \multicolumn}
+\makeatother
+\pagestyle{empty}
+
+\begin{document}
+\makeheaders[t]
+\maketitle
+
+\makerubric{formation.tex}
+\makerubric{experience_professionnelle.tex}
+\makerubric{competences_cvpro}
+% \makerubric{experience_recherche_cvpro.tex}
+\makerubric{experience_enseignement.tex}
+%\makerubric{publications_cvpro.tex}
+\makerubric{divers.tex}
+
+
+
+\end{document}
