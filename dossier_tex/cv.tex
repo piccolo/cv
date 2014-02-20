@@ -24,7 +24,7 @@
 }
 \rightheader{~}
 
-\titlefont{\fontfamily{pag}\selectfont\bfseries\Huge}
+\titlefont{\fontfamily{pag}\selectfont\bfseries\Large}
 \title{Docteur en Traitement du signal et des images}
 %\subtitle{Qualifi\'e en 27\up{\`eme} section (N° 09227185993) et 61\up{\`eme} section (N° 09261185993).}
 
@@ -41,17 +41,17 @@
 
 \setlength\rubricspace{10pt}
 \setlength\rubricafterspace{10pt}
-\setlength\subrubricbeforespace{10pt}
+\setlength\subrubricbeforespace{5pt}
 \setlength\subrubricspace{3pt}
-\renewcommand\arraystretch{1.5}
-%\setlength\rubricafterspace{-10pt}
+\renewcommand\arraystretch{1.2}
+\setlength\rubricafterspace{-5pt}
 
-\usepackage{color}
+\usepackage[usenames,dvipsnames]{color}
 \makeatletter
 % Cross the rubric titles:
 \def\@@rubrichead#1{%
   \@rubricfont%
-  \makebox[0pt][l]{\colorbox[gray]{0.7}{\makebox[\linewidth-4\fboxsep]{}}}%
+  \makebox[0pt][l]{\colorbox{YellowGreen}{\makebox[\linewidth-4\fboxsep]{}}}%
   \makebox[\linewidth-2\fboxsep][c]{#1}}
 % or underline them:
 \iffalse
@@ -63,7 +63,8 @@
 \def\@@subrubric#1{%
   \rule{0bp}{\@beforespace}
   {\@subrubricfont%
-    \makebox[1ex][l]{\colorbox[gray]{0.7}{\textcolor[gray]{0.7}{M}}}#1}%
+    %\makebox[1ex][l]{\colorbox{YellowGreen}{\textcolor[gray]{0.7}{}}}#1}%
+    \makebox[1ex][l]{\colorbox{YellowGreen}{\makebox[10pt]{\vphantom{MMM}}}}#1}%
   \@subrubricmark{#1}}
 \makeatother
 
@@ -84,7 +85,7 @@
 
 \makerubric{competences_cvpro}
 % \makerubric{experience_recherche_cvpro.tex}
-\makerubric{experience_enseignement.tex}
+%\makerubric{experience_enseignement.tex}
 %\makerubric{publications_cvpro.tex}
 \makerubric{divers.tex}
 
